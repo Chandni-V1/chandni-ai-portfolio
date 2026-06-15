@@ -996,6 +996,7 @@ Audiences portfolio, modernizing legacy TV measurement into high-velocity progra
 increase sales-qualified pipeline.</div>
       </div>
        </div>
+       </div>
        <div class="timeline-item" style="padding-bottom:0">
         <div class="timeline-dot" style="border-color:var(--accent);box-shadow:0 0 0 4px rgba(79,127,255,0.12)">🤖</div>
         <div class="timeline-content">
@@ -1114,62 +1115,57 @@ function showMoreProjects() {
 const projects = [
     {
     title: "Geolocation-based Treasure Hunt",
-    summary: "Sequence of clues of places in Bengaluru",
+    summary: "Sequence of clues of places in Bengaluru. Player can proceed in the journey only if they are phyically at the places the clues point to.",
     tags:[['Game','tag-blue'],['Maps','tag-purple']],
-    problem: "Describe the problem you were solving here.",
-    persona: "Who is this for? e.g. Young adults in Bengaluru who enjoy outdoor social experiences and want a more engaging way to explore the city.",
-    solution: "Describe your solution here.",
-    screenshots: [],
-    impact: "Describe the impact or results here. If no metrics yet, describe qualitative outcomes.",
-    learnings: "What did you learn building this?",
+    problem: "Organizing offline treasure hunts is a logistical nightmare, someone has to physically place clues at the right spots, in the right order, and hope nothing goes wrong on the day.",
+    persona: "Young adults in Bengaluru who enjoy outdoor social experiences and want a more engaging way to explore the city.",
+    solution: "An online treasure hunt where clues point to real-world locations. Progress is locked until the player physically enters within a set meter radius of the correct spot — keeping the real-world magic intact while making organizing effortless.",
+    screenshots: ["treasure.png"],
+    learnings: "Learned how to bridge online and offline experiences in a single product. Also discovered second-order product opportunities while building, for example, letting users create and share their own treasure hunts, which could be a natural next layer.",
     liveLink: "https://find-the-treasure.lovable.app/"
   },
   {
     title: "Mathematical Equations Visualiser",
     summary: "Input any equation and get a 2D or 3D visualisation",
     tags:[['Visualisation','tag-green'],['Tools','tag-blue']],
-    problem: "Describe the problem here.",
-    persona: "Who is this for?",
-    solution: "Describe your solution here.",
-    screenshots: [],
-    impact: "Describe the impact here.",
-    learnings: "What did you learn building this?",
+    problem: "Visualizing mathematical equations is harder than it should be. Students and math enthusiasts often struggle to intuitively understand what an equation looks like without dedicated tools.",
+    persona: "Students and math nerds who want to see their equations, not just solve them.",
+    solution: "Enter any equation and AI generates its 2D or 3D visualization instantly, no manual plotting, no friction.",
+    screenshots: ["graphweaver.png"],
+    learnings: "Designing for simplicity is harder than it looks. When your end user is a student who just wants an answer, every extra step is a drop-off. Sharpened the skill of stripping a product flow down to what actually matters.",
     liveLink: "https://graphweaver-engine.lovable.app/"
   },
   {
     title: "Decision Vault",
     summary: "Log decisions, track action items, never lose what matters",
     tags:[['SaaS','tag-amber'],['Tool','tag-purple']],
-    problem: "Describe the problem here.",
-    persona: "Who is this for?",
-    solution: "Describe your solution here.",
-    screenshots: [],
-    impact: "Describe the impact here.",
-    learnings: "What did you learn building this?",
+    problem: "Product Managers are the keepers of decisions, but those decisions happen across Slack, email, Notion, calls, and meetings. Collating them and disseminating the outcome to the right people is a constant pain point.",
+    persona: "Product Managers who need a single place to capture, organize, and share decisions made across scattered conversations.",
+    solution: "A lightweight tool to log decisions and action points as they happen. Search by topic and share directly via email, no more digging through threads to find what was decided.",
+    screenshots: ["decision.png"],
+    learnings: "Fragmented workarounds exist everywhere, but that's actually a signal, it means the real problem hasn't been solved yet. Recognized that a focused, purpose-built tool can outperform a patchwork of general ones.",
     liveLink: "https://chandni-v1.github.io/decision-logger/"
   },
   {
     title: "Snake Game: Nostalgia",
     summary: "The classic Nokia snake game reimagined",
     tags:[['Game','tag-purple'],['Classic','tag-blue']],
-    problem: "Describe the problem here.",
-    persona: "Who is this for?",
-    solution: "Describe your solution here.",
-    screenshots: [],
-    impact: "Describe the impact here.",
-    learnings: "What did you learn building this?",
+    problem: "Back in 2024, before 'vibe coding' was even a term, I wanted to test what AI could actually build. The experiment needed a canvas, and building something fun felt like the right one.",
+    persona: "Anyone who grew up with a Nokia phone, or just loves a simple, satisfying game.",
+    solution: "A faithful Snake rebuild with a nostalgia-first lens. Added a points system and on-screen arrow keys so it works equally well on mobile and desktop.",
+    screenshots: ["snake.png"],
+    learnings: "AI can code. That sounds obvious now, but experiencing it firsthand in 2024, before the hype cycle, was a genuine revelation that shaped how I think about building.",
     liveLink: "https://chandni-v1.github.io/Snake-game/"
   },
    {
     title: "Hangman Game",
     summary: "The classic hangman game with a timer twist",
     tags:[['Game','tag-teal'],['Classic','tag-blue']],
-    problem: "Describe the problem here.",
-    persona: "Who is this for?",
-    solution: "Describe your solution here.",
-    screenshots: [],
-    impact: "Describe the impact here.",
-    learnings: "What did you learn building this?",
+    problem: "After Snake, I wanted to push further: could AI help build something more complex? Multiplayer felt like the right test of that.",
+    persona: "Friends who enjoy competing on quick, simple games.",
+    solution: "A two-player Hangman game with a built-in timer. The timer determines who wins or loses, adding just enough pressure to make a classic game competitive again.",
+    screenshots: ["hangman.png"],
+    learnings: "Building complexity with AI isn't a straight line. Learned how to iterate effectively — when to push the AI further, when to step back and rethink the approach, and how to break down a complex feature into pieces AI can actually execute well.",
     liveLink: "https://chandni-v1.github.io/Hangman-game/"
   }
 ];
@@ -1202,10 +1198,7 @@ function openProject(idx) {
       <p>${p.solution}</p>
     </div>
     ${screenshotsHTML}
-    <div class="modal-section">
-      <div class="modal-section-title">Impact</div>
-      <p>${p.impact}</p>
-    </div>
+    
     <div class="modal-section">
       <div class="modal-section-title">Key Learnings</div>
       <p>${p.learnings}</p>
